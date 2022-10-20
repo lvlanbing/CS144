@@ -18,10 +18,11 @@ class ByteStream {
     // that's a sign that you probably want to keep exploring
     // different approaches.
     size_t _capacity = 0;
-    size_t data_len = 0;
     size_t read_size = 0;
     size_t write_size = 0;
-    std::queue<char> cache;
+
+    std::string cache = "";
+    bool flag_end = false;
     bool _error{};  //!< Flag indicating that the stream suffered an error.
 
   public:
